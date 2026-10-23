@@ -24,10 +24,11 @@ cask "brew-guide" do
   # 未签名应用需要移除隔离属性
   app "Brew Guide.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-rd", "com.apple.quarantine", "#{appdir}/Brew Guide.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-rd", "com.apple.quarantine", "{{appdir}}/Brew Guide.app"],
+        sudo: false,
+        must_succeed: false
   end
 
   zap trash: [
