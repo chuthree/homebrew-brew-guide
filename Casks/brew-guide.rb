@@ -1,13 +1,13 @@
 cask "brew-guide" do
-  version "1.7.1"
+  version "1.7.2"
 
   on_arm do
-    sha256 "e0ed53637efcb6cda721af71d09730723d828e0ac1a6ece381cc5557e3413c53"
+    sha256 "5e3f097bb41ddbffea258ebe9b44b31b51cf2d018623a226e52320b3a767fdf3"
     url "https://github.com/chuthree/brew-guide/releases/download/v#{version}/BrewGuide_#{version}_macos_arm64.dmg"
   end
 
   on_intel do
-    sha256 "cb7a34dbc758928a81521b828db5154c310acac77eac77b29810c0c66ab76d31"
+    sha256 "2ef59186f0e919d978d4500c41e44d09432b3570907e9470f48d49b558c70465"
     url "https://github.com/chuthree/brew-guide/releases/download/v#{version}/BrewGuide_#{version}_macos_x64.dmg"
   end
 
